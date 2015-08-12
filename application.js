@@ -22,17 +22,12 @@ app.use('/mbaas', mbaasExpress.mbaas);
 
 // allow serving of static files from the public directory
 app.use(express.static(__dirname + '/public'));
-
-// Note: important that this is added just before your own Routes
-app.use(mbaasExpress.fhmiddleware());
-
 // fhlint-begin: custom-routes
 
 // configure Express
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.engine('ejs', require('ejs-locals'));
-app.use(express.static(__dirname + '/public'));
 app.use(require('cookie-parser')());
 app.use(require('body-parser')());
 app.use(require('method-override')());
@@ -43,6 +38,9 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use('/', require('./lib/saml.js'));
+
+// Note: important that this is added just before your own Routes
+app.use(mbaasExpress.fhmiddleware());
 // fhlint-end
 
 // Important that this is last!
