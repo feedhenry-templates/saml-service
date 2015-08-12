@@ -1,0 +1,40 @@
+<% layout('layout') -%>
+
+<h3>You are now logged in.</h3>
+
+<h4>Details:</h4>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td><%= first_name %> <%= last_name %></td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td><%= email %></td>
+    </tr>
+    <tr>
+      <td>Groups</td>
+      <td>
+        <ul>
+        <% for(var i=0; i < groups.length; i++) { %>
+          <li><%= groups[i] %></li>
+        <% } %>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>SAML Assertion</td>
+      <td><textarea style="width: 100%; height: 400px;"><%= saml %></textarea></td>
+    </tr>
+  </tbody>
+</table>
+
+<a href="<%= logout_link %>">ADFS Logout</a>

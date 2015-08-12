@@ -1,0 +1,49 @@
+<% layout('layout') -%>
+
+<a href="/login" class="btn btn-primary btn-lg">Login</a>
+
+<hr/>
+
+<h4>Configuration</h4>
+
+<p>In order to use this Service, you need to create a Trust between this Service as a "Service Provider" and your Identify Provider.</p>
+<p>Below are some Environment Variables used by the Service. Some are optional, and are dynamically configured by the Service itself (e.g. Issuer &amp; Callback URL are both set to <code><%= host %></code>)</p>
+
+<p>For more details, see <a href="https://github.com/bergie/passport-saml">passport-saml</a></p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Variable</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SAML_ISSUER</td>
+      <td><%= host %></td>
+      <td>Issuer string to supply to identity provider (Defaults to: https://MBaaS_Service_Host/login/callback)</td>
+    </tr>
+    <tr>
+      <td>SAML_CALLBACK_URL</td>
+      <td><%= host %></td>
+      <td>Full callback URL for IdP to send assertions back to (Defaults to: https://MBaaS_Service_Host/login/callback)</td>
+    </tr>
+    <tr>
+      <td>SAML_ENTRY_POINT</td>
+      <td><%= config.entryPoint %></td>
+      <td>Identity provider entrypoint (e.g. https://my-adfs.example.com/adfs/ls/)</td>
+    </tr>
+    <tr>
+      <td>SAML_AUTHN_CONTEXT</td>
+      <td><%= config.authnContext %></td>
+      <td>Name identifier format to request auth context - defaults to 'urn:federation:authentication:windows' (for AD FS)</td>
+    </tr>
+    <tr>
+      <td>SAML_CERT</td>
+      <td><%= config.cert %></td>
+      <td>(Optional) Validate incoming SAML responses with your IdP's public certificate</td>
+    </tr>
+  </tbody>
+</table>
