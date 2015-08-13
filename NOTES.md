@@ -14,3 +14,6 @@ receive a URL for them to open on a Client App via an in-app browser (see exampl
   - Correspond the received SAML assertion and the user's proxy token/device ID (which we'd persisted as `req.session.token`)
   - Persist data from the SAML assertion
   - Redirect to `/login/ok` - which the Client App will use to determine if authentication was successful or not (and close the in-app-browser)
+
+### Environment Variables
+See the Service web front-end for more details, but you'll need to set an environment variable `SAML_ENTRY_POINT` to point to your IdP - you'll also want to configure trust between your IdP and this service. Use https://my_mbaas_service/login/callback for both an identifier and a callback URL for your IdP when configuring this trust.
