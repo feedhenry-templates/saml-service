@@ -18,7 +18,7 @@
     "ejs-locals": "1.0.2",
     "express": "4.0.0",
     "express-session": "1.11.3",
-    "fh-mbaas-api": "5.9.5",
+    "fh-mbaas-api": "5.10.0",
     "lodash-contrib": "393.0.1",
     "method-override": "2.3.3",
     "moment": "2.10.3",
