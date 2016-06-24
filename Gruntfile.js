@@ -86,7 +86,7 @@ module.exports = function(grunt) {
           stderr: true,
           failOnError: true
         },
-        command: 'env NODE_PATH=. ./node_modules/.bin/mocha test/accept/test_*.js'
+        command: 'env NODE_PATH=. ./node_modules/.bin/mocha -A -u exports --recursive application.js test/accept/'
       },
       coverage_unit: {
         options: {
@@ -109,7 +109,7 @@ module.exports = function(grunt) {
         },
         command: [
           'rm -rf coverage cov-accept',
-          'env NODE_PATH=. ./node_modules/.bin/istanbul cover --dir cov-accept ./node_modules/.bin/_mocha -- -A -u exports --recursive test/server.js test/accept/',
+          'env NODE_PATH=. ./node_modules/.bin/istanbul cover --dir cov-accept ./node_modules/.bin/_mocha -- -A -u exports --recursive application.js test/accept/',
           './node_modules/.bin/istanbul report',
           'echo "See html coverage at: `pwd`/coverage/lcov-report/index.html"'
         ].join('&&')
