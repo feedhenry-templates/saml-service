@@ -86,7 +86,7 @@ module.exports = function(grunt) {
           stderr: true,
           failOnError: true
         },
-        command: 'env NODE_PATH=. ./node_modules/.bin/mocha -A -u exports --recursive test/server.js test/accept/'
+        command: 'env NODE_PATH=. ./node_modules/.bin/mocha test/accept/test_*.js'
       },
       coverage_unit: {
         options: {
