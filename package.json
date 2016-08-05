@@ -4,7 +4,7 @@
   "description": "",
   "main": "application.js",
   "scripts": {
-    "test": "grunt test",
+    "test": "echo \"Error: no test specified\" && exit 0",
     "start": "node application.js"
   },
   "author": "Red Hat Mobile",
