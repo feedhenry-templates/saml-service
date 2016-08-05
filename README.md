@@ -1,3 +1,4 @@
+
 # SAML Service
 
 Use this as a starting point to do SSO with your SAML IdP - this example has been configured to talk to AD FS out of the box, but `passport-saml` supports most SAML providers.
