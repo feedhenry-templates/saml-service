@@ -1,4 +1,3 @@
-Test
 
 # SAML Service
 
