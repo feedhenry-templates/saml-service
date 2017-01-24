@@ -24,7 +24,7 @@
     "moment": "2.10.3",
     "passport": "0.2.2",
     "passport-saml": "0.15.0",
-    "request": "2.60.0",
+    "request": "2.79.0",
     "xml2js": "0.4.9"
   },
   "devDependencies": {
