@@ -4,3 +4,4 @@ cov-*
 coverage
 plato
 .idea
+npm-debug.log
