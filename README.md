@@ -1,5 +1,6 @@
 
 # SAML Service
+[![Dependency Status](https://img.shields.io/david/feedhenry-templates/saml-service.svg?style=flat-square)](https://david-dm.org/feedhenry-templates/saml-service)
 
 Use this as a starting point to do SSO with your SAML IdP - this example has been configured to talk to AD FS out of the box, but `passport-saml` supports most SAML providers.
 
