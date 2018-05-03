@@ -3,10 +3,11 @@ group: edge
 sudo: required
 services:
   - mongodb
+  - redis-server
   - docker
 node_js:
-  - "6.9.1"
-  - "4.4.3"
+  - 4
+  - 6
 before_install:
   - npm install fh-build -g
   - fh-build template
